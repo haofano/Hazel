@@ -4,7 +4,7 @@
 
 namespace Hazel {
 
-	class EditorLayer : public Hazel::Layer
+	class EditorLayer : public Layer
 	{
 	public:
 		EditorLayer();
@@ -17,13 +17,16 @@ namespace Hazel {
 		virtual void OnImGuiRender() override;
 		void OnEvent(Event& e) override;
 	private:
-		Hazel::OrthographicCameraController m_CameraController;
+		OrthographicCameraController m_CameraController;
 
-		Hazel::Ref<Hazel::VertexArray> m_SquareVA;
-		Hazel::Ref<Hazel::Shader> m_FlatColorShader;
-		Hazel::Ref<Hazel::Framebuffer> m_Framebuffer;
+		Ref<VertexArray> m_SquareVA;
+		Ref<Shader> m_FlatColorShader;
+		Ref<Framebuffer> m_Framebuffer;
 
-		Hazel::Ref<Hazel::Texture2D> m_CheckerboardTexture;
+		Ref<Scene> m_ActiveScene;
+		entt::entity m_SquareEntity;
+
+		Ref<Texture2D> m_CheckerboardTexture;
 
 		bool m_ViewportFocused = false, m_ViewportHovered = false;
 		glm::vec2 m_ViewportSize = { 0.0f, 0.0f };

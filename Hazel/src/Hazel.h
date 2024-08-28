@@ -8,6 +8,9 @@
 
 #include "Hazel/ImGui/ImGuiLayer.h"
 
+#include "Hazel/Scene/Scene.h"
+#include "Hazel/Scene/Components.h"
+
 #include "Hazel/Core/Input.h"
 #include "Hazel/Core/KeyCodes.h"
 #include "Hazel/Core/MouseCodesh.h"
