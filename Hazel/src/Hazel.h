@@ -10,6 +10,7 @@
 
 #include "Hazel/Scene/Scene.h"
 #include "Hazel/Scene/Entity.h"
+#include "Hazel/Scene/ScriptableEntity.h"
 #include "Hazel/Scene/Components.h"
 
 #include "Hazel/Core/Input.h"
