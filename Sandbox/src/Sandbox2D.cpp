@@ -3,6 +3,7 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "Hazel/Core/MouseCodesh.h"
 
 static const uint32_t s_MapWidth = 24;
 static const char* s_MapTiles =
@@ -121,7 +122,7 @@ void Sandbox2D::OnUpdate(Hazel::Timestep ts)
 #endif
 
 
-	if (Hazel::Input::IsMouseButtonPressed(HZ_MOUSE_BUTTON_LEFT))
+	if (Hazel::Input::IsMouseButtonPressed(Hazel::Mouse::ButtonLeft))
 	{
 		auto [x, y] = Hazel::Input::GetMousePosition();
 		auto width = Hazel::Application::Get().GetWindow().GetWidth();
