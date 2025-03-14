@@ -331,7 +331,7 @@ namespace Hazel {
 
 			std::vector<GLchar> infoLog(maxLength);
 			glGetProgramInfoLog(program, maxLength, &maxLength, infoLog.data());
-			HZ_CORE_ERROR("SHader linking failed ({0}:\n{1}", m_FilePath, infoLog.data());
+			HZ_CORE_ERROR("Shader linking failed ({0}:\n{1}", m_FilePath, infoLog.data());
 
 			glDeleteProgram(program);
 

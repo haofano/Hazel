@@ -4,6 +4,7 @@
 #include "Hazel/Core/Log.h"
 #include "Hazel/Scene/Scene.h"
 #include "Hazel/Scene/Entity.h"
+#include <filesystem>
 
 namespace Hazel {
 
