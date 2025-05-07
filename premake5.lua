@@ -29,6 +29,7 @@ IncludeDir["entt"] = "Hazel/vendor/entt/include"
 IncludeDir["yaml_cpp"] = "Hazel/vendor/yaml-cpp/include"
 IncludeDir["ImGuizmo"] = "Hazel/vendor/ImGuizmo"
 IncludeDir["VulkanSDK"] = "%{VULKAN_SDK}/Include"
+IncludeDir["Box2D"] = "Hazel/vendor/Box2D/include"
 
 LibraryDir = {}
 
@@ -53,6 +54,7 @@ group "Dependencies"
 	include "Hazel/vendor/Glad"
 	include "Hazel/vendor/imgui"
 	include "Hazel/vendor/yaml-cpp"
+	include "Hazel/vendor/Box2D"
 
 group ""
 project "Hazel"
@@ -100,6 +102,7 @@ project "Hazel"
 		"%{IncludeDir.yaml_cpp}",
 		"%{IncludeDir.ImGuizmo}",
 		"%{IncludeDir.VulkanSDK}",
+		"%{IncludeDir.Box2D}",
 	}
 	
 	links
@@ -108,7 +111,8 @@ project "Hazel"
 		"Glad",
 		"ImGui",
 		"yaml-cpp",
-		"opengl32.lib"
+		"opengl32.lib",
+		"Box2D",
 	}
 
 	filter "files:vendor/ImGuizmo/**.cpp"
@@ -223,6 +227,7 @@ project "Hazelnut"
 		"Hazel/vendor/spdlog/include",
 		"Hazel/src",
 		"Hazel/vendor",
+		
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.entt}",
 		"%{IncludeDir.ImGuizmo}",
